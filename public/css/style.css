@@ -22,17 +22,44 @@ body {
     align-items: center;
 }
 
+.logo {
+    
+}
+
 form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     border-radius: 200px;
-
     gap: 1em;
-    width: 1185px;
-    height: 457px;
-    border-radius: 99px;
+    width: 50vw;
+    height: 52vh;
+    border-radius: 70px;
     background: #18893c;
     border: 6px solid #0e6cdb;
+}
+
+a {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+input {
+    color: #0e6cdb;
+    border: none;
+    padding: 0.2em;
+    margin: 0;
+    font-size: 40px;
+    width: 75%;
+}
+
+.button_1 {
+    background: #f8d582;
+    border: none;
+    padding: 0.2em;
+    color: #3f48cc;
+    font-size: 40px;
+    font-weight: bold;
+    width: 35%;
 }
