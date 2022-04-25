@@ -63,3 +63,7 @@ input {
     font-weight: bold;
     width: 35%;
 }
+
+.button_1:hover {
+    background: #FEC337;
+}
