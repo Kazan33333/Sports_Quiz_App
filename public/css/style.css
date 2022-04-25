@@ -1,0 +1,38 @@
+* {
+    color: white;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    width: 100vw;
+}
+
+body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(#8b58e2 0%, #462c71 50%, #0af759 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 200px;
+
+    gap: 1em;
+    width: 1185px;
+    height: 457px;
+    border-radius: 99px;
+    background: #18893c;
+    border: 6px solid #0e6cdb;
+}
