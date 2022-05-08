@@ -22,9 +22,6 @@ body {
     align-items: center;
 }
 
-.logo {
-    
-}
 
 form {
     display: flex;
@@ -67,3 +64,4 @@ input {
 .button_1:hover {
     background: #FEC337;
 }
+
