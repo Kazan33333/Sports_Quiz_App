@@ -66,6 +66,7 @@ input {
     font-size: 40px;
     font-weight: bold;
     width: 35%;
+    cursor: pointer;
 }
 
 .button_1:hover {
