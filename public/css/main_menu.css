@@ -17,7 +17,7 @@
     border: 6px solid #0e6cdb;
 }
 
-.buttons> #b1,#b2,#b3,#b4{
+.buttons #b1,#b2,#b3,#b4{
     background: #f8d582;
     border: 6px solid #0e6cdb;
     border-radius: 1em;
