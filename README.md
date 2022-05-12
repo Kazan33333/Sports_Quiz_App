@@ -5,3 +5,6 @@
 * Maciej Kozak
 * Szymon Kojder
 * Jan Kopeć
+
+#### ERD of the database:
+# <img src="Sports_Quiz_App_ERD.svg"/>
