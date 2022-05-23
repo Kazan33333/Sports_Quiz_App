@@ -73,6 +73,25 @@ input {
     background: #FEC337;
 }
 
+#i1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.header{
+    position: absolute;
+    top: 3vh;
+    left: 13vw;
+    width: 85vw;
+    height: 13vh;
+    border-radius: 31px;
+    background: #18893c;
+    border: 6px solid #0e6cdb;
+}
+
 .list1 {
     display: flex;
     flex-direction: column;
@@ -80,8 +99,8 @@ input {
     align-items: center;
     border-radius: 200px;
     gap: 1em;
-    width: 50vw;
-    height: 52vh;
+    width: 80vw;
+    height: 65vh;
     border-radius: 70px;
     background: #18893c;
     border: 6px solid #0e6cdb;
