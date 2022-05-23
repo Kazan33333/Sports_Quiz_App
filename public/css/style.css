@@ -73,7 +73,7 @@ input {
     background: #FEC337;
 }
 
-#i1{
+#i1 {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -81,7 +81,7 @@ input {
     font-weight: bold;
 }
 
-.header{
+.header {
     position: absolute;
     top: 3vh;
     left: 13vw;
@@ -104,4 +104,20 @@ input {
     border-radius: 70px;
     background: #18893c;
     border: 6px solid #0e6cdb;
+}
+
+.button_play {
+    background: #f8d582;
+    border: none;
+    padding: 0.2em;
+    color: #3f48cc;
+    border-radius: 1em;
+    font-size: 40px;
+    font-weight: bold;
+    width: 30%;
+    cursor: pointer;
+}
+
+.button_play:hover {
+    background: #FEC337;
 }
