@@ -1,0 +1,44 @@
+#i2, #i3, #i4{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+#i2{
+    position: absolute;
+    top: 30vh;
+    left: 45vw;
+}
+
+#i3{
+    position: absolute;
+    top: 50vh;
+    left: 30vw;
+}
+
+#i4{
+    position: absolute;
+    top: 60vh;
+    left: 30vw;
+}
+
+.list1{
+    position: relative;
+    top: 10vh;
+}
+
+.button_play {
+    position: absolute;
+    top: 43vh;
+    border: 6px solid #0e6cdb;
+    border-radius: 0.7em;
+    margin: 3vh;
+    color: #18893c;
+    font-size: 6vh;
+    width: 37vw;
+    height: 17vh;
+}
+
