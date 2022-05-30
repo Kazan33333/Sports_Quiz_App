@@ -1,4 +1,7 @@
-# <img src="public/img/Logo.png" style="height: 129px; width: 172px;"/>
+<p align="center">
+  <img src="public/img/Logo.png" style="height: 129px; width: 172px;"/>
+</p>
+
 ### Collaborators:
 * Milena Gil - team leader
 * Krzysztof Kazanowski - associate team leader
