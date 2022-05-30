@@ -6,5 +6,8 @@
 * Szymon Kojder
 * Jan Kopeć
 
+### Functional diagram of the app:
+# <img src="Functional_diagram.svg"/>
+
 ### ERD of the database:
 # <img src="Sports_Quiz_App_ERD.svg"/>
