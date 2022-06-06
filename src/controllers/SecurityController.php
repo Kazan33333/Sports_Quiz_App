@@ -65,8 +65,7 @@ class SecurityController extends AppController {
         $user = new User(
             password_hash($_POST['password'], PASSWORD_DEFAULT),
             $_POST['email'],
-            $_POST['name'],
-            $_POST['surname']
+            $_POST['nickname'],
         );
 
         $message = $this->userRepository->saveUser($user);
