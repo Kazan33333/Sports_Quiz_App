@@ -22,16 +22,16 @@
         </h2>
     </div>
     <div class="buttons">
-        <a href="play_with_friends.php">
+        <a href="/play_with_friends">
             <button id="b1" type="button">PLAY WITH FRIENDS</button>
         </a>
-        <a href="solo_game.php">
+        <a href="/solo_game">
             <button id="b2" type="button">SOLO GAME</button>
         </a>
-        <a href="your_points.php">
+        <a href="/your_points">
             <button id="b3" type="button">YOUR POINTS</button>
         </a>
-        <a href="top_100.php">
+        <a href="/top_100">
             <button id="b4" type="button">TOP 100</button>
         </a>
     </div>

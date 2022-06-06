@@ -21,7 +21,7 @@
             <input name="password" type="password" placeholder="Password">
             <input name="confirmPassword" type="password" placeholder="Repeat password">
             <button class="button_1" type="submit" id="register">Register</button>
-            <a href="login.html">Back</a>
+            <a href="/login">Back</a>
         </form>
     </div>
 </body>
