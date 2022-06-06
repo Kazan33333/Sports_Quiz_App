@@ -11,7 +11,7 @@ class UserRepository extends Repository
             '
                 SELECT public.users.nickname,
                        public.users.email,
-                       public.users.password,
+                       public.users.password
                 FROM public.users
                 WHERE public.users.email = :email
             '
