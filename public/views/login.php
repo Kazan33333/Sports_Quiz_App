@@ -19,7 +19,7 @@
         <input name="email" type="text" placeholder="Email">
         <input name="password" type="password" placeholder="Password">
         <button class="button_1" type="submit">Log in</button>
-        <a href="register.php">Register</a>
+        <a href="/register">Register</a>
     </form>
 </div>
 </body>
