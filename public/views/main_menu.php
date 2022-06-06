@@ -11,7 +11,7 @@
 <body>
     <div class="logo">
         <h1>
-            <a href="main_menu.html">
+            <a href="main_menu.php">
                 <img id="logo2" src="/public/img/Logo.png"></img>
             </a>
         </h1>
@@ -22,16 +22,16 @@
         </h2>
     </div>
     <div class="buttons">
-        <a href="play_with_friends.html">
+        <a href="play_with_friends.php">
             <button id="b1" type="button">PLAY WITH FRIENDS</button>
         </a>
-        <a href="solo_game.html">
+        <a href="solo_game.php">
             <button id="b2" type="button">SOLO GAME</button>
         </a>
-        <a href="your_points.html">
+        <a href="your_points.php">
             <button id="b3" type="button">YOUR POINTS</button>
         </a>
-        <a href="top_100.html">
+        <a href="top_100.php">
             <button id="b4" type="button">TOP 100</button>
         </a>
     </div>
