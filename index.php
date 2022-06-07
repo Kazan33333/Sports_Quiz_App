@@ -12,6 +12,7 @@ Router::get('solo_game', 'DefaultController');
 Router::get('play_with_friends', 'DefaultController');
 Router::get('top_100', 'DefaultController');
 Router::get('add_question', 'DefaultController');
+Router::get('your_points', 'DefaultController');
 
 Router::post('login', 'SecurityController');
 Router::post('logout', 'SecurityController');
