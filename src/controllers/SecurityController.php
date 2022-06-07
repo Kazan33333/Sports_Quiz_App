@@ -38,10 +38,7 @@ class SecurityController extends AppController {
             return $this->render('login', ['messages' => ['Wrong email or password']]);
         }
         $cookieNameValue = $user->getEmail();
-        $cookieImageValue = $user->getImageUrl();
-        $cookieUsernameValue = $user->getName();
-        $cookieSurnameValue = $user->getSurname();
-        $cookieRoleValue = $user->getRole();
+        $cookieNicknameValue = $user->getNickname();
 
 
         if (!isset($_COOKIE[$this->cookieName])) {
@@ -53,7 +50,7 @@ class SecurityController extends AppController {
         }
 
         $url = "http://$_SERVER[HTTP_HOST]";
-        header("Location: {$url}/home");
+        header("Location: {$url}/main_menu");
     }
 
     public function register()
