@@ -21,6 +21,13 @@
         <button class="button_1" type="submit">Log in</button>
         <a href="/register">Register</a>
     </form>
+    <?php
+    if(isset($messages)){
+        foreach($messages as $message) {
+            echo $message;
+        }
+    }
+    ?>
 </div>
 </body>
 </html>

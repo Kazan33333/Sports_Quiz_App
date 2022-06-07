@@ -22,6 +22,13 @@
             <input name="confirmPassword" type="password" placeholder="Repeat password">
             <button class="button_1" type="submit" id="register">Register</button>
             <a href="/login">Back</a>
+            <?php
+            if(isset($messages)){
+                foreach($messages as $message) {
+                    echo $message;
+                }
+            }
+            ?>
         </form>
     </div>
 </body>

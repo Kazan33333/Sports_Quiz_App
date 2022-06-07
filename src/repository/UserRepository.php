@@ -41,8 +41,8 @@ class UserRepository extends Repository
         try {
             $stmt = $this->database->connect()->prepare(
                 '
-                INSERT INTO public.users(password, email, nickname)
-                VALUES (:password, :email, :nickname)
+                INSERT INTO public.users(password, email, nickname, date, id_role)
+                VALUES (:password, :email, :nickname, CURRENT_TIMESTAMP, 1);
             '
             );
 
