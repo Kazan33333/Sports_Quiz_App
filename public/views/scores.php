@@ -11,7 +11,7 @@
 <body>
     <div class="logo">
         <h1>
-            <a href="main_menu.php">
+            <a href="/main_menu">
                 <img id="logo2" src="/public/img/Logo.png"></img>
             </a>
         </h1>
