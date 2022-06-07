@@ -38,3 +38,15 @@
 #b1:hover,#b2:hover,#b3:hover,#b4:hover {
     background: #FEC337;
 }
+
+.form {
+    position: absolute;
+    top: 40px;
+    left: 10px;
+    border-radius: 0px;
+    gap: 1em;
+    width: 50vw;
+    height: 52vh;
+    background: none;
+    border: 6px solid #0e6cdb;
+}

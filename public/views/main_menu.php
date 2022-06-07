@@ -35,5 +35,10 @@
             <button id="b4" type="button">TOP 100</button>
         </a>
     </div>
+    <div class="user-logout">
+        <form class="logout" action="logout" method="POST">
+            <button class="button_1" action="logout" method=""POST type="submit">Log out</button>
+        </form>
+    </div>
 </body>
 </html>
