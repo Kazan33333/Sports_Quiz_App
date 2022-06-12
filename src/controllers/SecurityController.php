@@ -60,6 +60,7 @@ class SecurityController extends AppController {
         }
 
         $user = new User(
+            0,
             $_POST['nickname'],
             password_hash($_POST['password'], PASSWORD_DEFAULT),
             $_POST['email']
