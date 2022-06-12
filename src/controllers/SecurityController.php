@@ -37,16 +37,16 @@ class SecurityController extends AppController {
         if (!password_verify($password, $user->getPassword())) {
             return $this->render('login', ['messages' => ['Wrong email or password']]);
         }
-        $cookieNameValue = $user->getEmail();
+
+        $cookieIdValue = $user->getIdUser();
+        $cookieEmailValue = $user->getEmail();
         $cookieNicknameValue = $user->getNickname();
 
 
         if (!isset($_COOKIE[$this->cookieName])) {
-            setCookie($this->cookieName, $cookieNameValue, time() + (86400 * 30), "/");
-            setCookie('imageurl', $cookieImageValue, time() + (86400 * 30), "/");
-            setCookie('name', $cookieUsernameValue, time() + (86400 * 30), "/");
-            setCookie('surname', $cookieSurnameValue, time() + (86400 * 30), "/");
-            setCookie('role', $cookieRoleValue, time() + (86400 * 30), "/");
+            setCookie($this->cookieName, $cookieNicknameValue, time() + (86400 * 30), "/");
+            setCookie('$id_user', $cookieIdValue, time() + (86400 * 30), "/");
+            setCookie('email', $cookieEmailValue, time() + (86400 * 30), "/");
         }
 
         $url = "http://$_SERVER[HTTP_HOST]";
@@ -74,11 +74,9 @@ class SecurityController extends AppController {
     public function logout()
     {
         if (isset($_COOKIE['user'])) {
-            setcookie('user', '', time() - (86400 * 30), "/");
-            setcookie('imageurl', '', time() - (86400 * 30), "/");
-            setcookie('name', '', time() - (86400 * 30), "/");
-            setcookie('surname', '', time() - (86400 * 30), "/");
-            setcookie('role', '', time() - (86400 * 30), "/");
+            setcookie('id_user', '', time() - (86400 * 30), "/");
+            setcookie('user;', '', time() - (86400 * 30), "/");
+            setcookie('email', '', time() - (86400 * 30), "/");
             $url = "http://$_SERVER[HTTP_HOST]";
             header("Location: {$url}/");
         }

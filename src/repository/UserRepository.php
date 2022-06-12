@@ -9,9 +9,10 @@ class UserRepository extends Repository
     {
         $stmt = $this->database->connect()->prepare(
             '
-                SELECT public.users.nickname,
-                       public.users.email,
-                       public.users.password
+                SELECT  public.users.id_user,
+                        public.users.nickname,
+                        public.users.email,
+                        public.users.password
                 FROM public.users
                 WHERE public.users.email = :email
             '
@@ -26,6 +27,7 @@ class UserRepository extends Repository
         }
 
         return new User(
+            $user['id_user'],
             $user['nickname'],
             $user['password'],
             $user['email']

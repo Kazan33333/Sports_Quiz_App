@@ -40,7 +40,7 @@ class QuestionRepository extends Repository
             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
         ');
 
-        $id_user = 1;
+        $id_user = $_COOKIE['id_user'];
         $flag = 1;
 
         $stmt->execute([

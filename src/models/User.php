@@ -2,9 +2,35 @@
 
 class User
 {
+    private int $id_user;
     private string $nickname;
     private string $password;
     private string $email;
+
+    /**
+     * @param int $id_user
+     * @param string $nickname
+     * @param string $password
+     * @param string $email
+     */
+    public function __construct(int $id_user, string $nickname, string $password, string $email)
+    {
+        $this->id_user = $id_user;
+        $this->nickname = $nickname;
+        $this->password = $password;
+        $this->email = $email;
+    }
+
+
+    public function getIdUser(): int
+    {
+        return $this->id_user;
+    }
+
+    public function setIdUser(int $id_user): void
+    {
+        $this->id_user = $id_user;
+    }
 
     public function getNickname(): string
     {
@@ -35,12 +61,4 @@ class User
     {
         $this->email = $email;
     }
-
-    public function __construct(string $nickname, string $password, string $email)
-    {
-        $this->nickname = $nickname;
-        $this->password = $password;
-        $this->email = $email;
-    }
-
 }
