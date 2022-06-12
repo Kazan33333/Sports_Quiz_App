@@ -14,8 +14,6 @@ class Quiz
         $this->id_user2 = $id_user2;
         $this->id_category = $id_category;
         $this->count_of_questions = $count_of_questions;
-
-        $max_id_question = get_max_id_question();
     }
 
     public function getIdUser1()
@@ -56,5 +54,10 @@ class Quiz
     public function setCountOfQuestions($count_of_questions): void
     {
         $this->count_of_questions = $count_of_questions;
+    }
+
+    public function add_question_to_quiz($question): void
+    {
+        array_push($this->list_of_questions, $question);
     }
 }
