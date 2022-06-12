@@ -8,7 +8,7 @@ class Quiz
     private $count_of_questions;
     private $list_of_questions;
 
-    public function __construct($id_user1, $id_user2, $id_category, $count_of_questions)
+    public function __construct($id_user1, $id_user2, $id_category, $count_of_questions = 5)
     {
         $this->id_user1 = $id_user1;
         $this->id_user2 = $id_user2;

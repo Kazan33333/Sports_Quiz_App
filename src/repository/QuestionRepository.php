@@ -57,21 +57,4 @@ class QuestionRepository extends Repository
 
         ]);
     }
-
-    public function get_max_id_question(): ?int
-    {
-        $stmt = $this->database->connect()->prepare('
-            SELECT MAX(id) as max_id_question FROM public.questions
-        ');
-
-        $stmt->execute();
-
-        $max_id_question = $stmt->fetch(PDO::FETCH_ASSOC);
-
-        if ($max_id_question == false) {
-            return null;
-        }
-
-        return $max_id_question;
-    }
 }
