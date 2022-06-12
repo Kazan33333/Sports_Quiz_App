@@ -51,7 +51,14 @@
     border: 6px solid #0e6cdb;
 }
 
-.user-logout{
+.logout{
     background: none;
     border: none;
+}
+
+.button_1{
+    width: 10vw !important;
+    position: absolute;
+    top: 17vh;
+    left: 1vw;
 }
