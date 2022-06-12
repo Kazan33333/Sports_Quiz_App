@@ -31,9 +31,9 @@ class QuestionController extends AppController {
             $question = new Question($_POST['question_line'], $_POST['answer1'], $_POST['answer2'],$_POST['answer3'],$_POST['answer4'],$_POST['correct_answer'],$_POST['id_category'], $_FILES['file']['name']);
             $this->questionRepository->addQuestion($question);
 
-            return $this->render('projects', ['messages' => $this->message]);//
+            return $this->render('projects', ['messages' => $this->message]);
         }
-        return $this->render('quiz-sheet', ['messages' => $this->message]);//
+        return $this->render('quiz-sheet', ['messages' => $this->message]);
     }
 
     private function validate(array $file): bool
