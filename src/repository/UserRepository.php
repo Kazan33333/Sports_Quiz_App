@@ -38,7 +38,7 @@ class UserRepository extends Repository
     {
         $email = $user->getEmail();
         if ($this->getUser($email) != null) {
-            return "User already exist";
+            return "User already exists";
         }
         try {
             $stmt = $this->database->connect()->prepare(

@@ -22,6 +22,7 @@
             <input name="confirmPassword" type="password" placeholder="Repeat password">
             <button class="button_1" type="submit" id="register">Register</button>
             <a href="/login">Back</a>
+            <p style="color: red; font-size: 21px; font-weight: bold">
             <?php
             if(isset($messages)){
                 foreach($messages as $message) {
@@ -29,6 +30,7 @@
                 }
             }
             ?>
+            </p>
         </form>
     </div>
 </body>

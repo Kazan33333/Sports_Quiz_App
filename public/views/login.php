@@ -20,14 +20,16 @@
         <input name="password" type="password" placeholder="Password">
         <button class="button_1" type="submit">Log in</button>
         <a href="/register">Register</a>
+        <p style="color: red; font-size: 21px; font-weight: bold">
+            <?php
+            if(isset($messages)){
+                foreach($messages as $message) {
+                    echo $message;
+                }
+            }
+            ?>
+        </p>
     </form>
-    <?php
-    if(isset($messages)){
-        foreach($messages as $message) {
-            echo $message;
-        }
-    }
-    ?>
 </div>
 </body>
 </html>
