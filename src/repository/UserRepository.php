@@ -9,7 +9,7 @@ class UserRepository extends Repository
     {
         $stmt = $this->database->connect()->prepare(
             '
-                SELECT  public.users.id_user,
+                SELECT  public.users.id,
                         public.users.nickname,
                         public.users.email,
                         public.users.password

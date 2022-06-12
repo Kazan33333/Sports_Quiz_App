@@ -7,12 +7,6 @@ class User
     private string $password;
     private string $email;
 
-    /**
-     * @param int $id_user
-     * @param string $nickname
-     * @param string $password
-     * @param string $email
-     */
     public function __construct(int $id_user, string $nickname, string $password, string $email)
     {
         $this->id_user = $id_user;
