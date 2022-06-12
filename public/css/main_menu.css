@@ -50,3 +50,8 @@
     background: none;
     border: 6px solid #0e6cdb;
 }
+
+.user-logout{
+    background: none;
+    border: none;
+}

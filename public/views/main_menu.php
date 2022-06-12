@@ -10,11 +10,7 @@
 </head>
 <body>
     <div class="logo">
-        <h1>
-            <a href="/main_menu">
-                <img id="logo2" src="/public/img/Logo.png"></img>
-            </a>
-        </h1>
+        <img id="logo2" src="/public/img/Logo.png"></img>
     </div>
     <div class="header">
         <h2>
