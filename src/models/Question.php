@@ -1,6 +1,7 @@
 <?php
 
 class Question {
+    private int $id = 0;
     private $question_line;
     private $answer1;
     private $answer2;
@@ -9,6 +10,7 @@ class Question {
     private $correct_answer;
     private $id_category;
     private $image;
+    private int $id_quiz_question = 0;
 
     public function __construct($question_line, $answer1,$answer2,$answer3,$answer4, $correct_answer, $id_category, $image)
     {
@@ -20,6 +22,26 @@ class Question {
         $this->correct_answer = $correct_answer;
         $this->id_category= $id_category;
         $this->image = $image;
+    }
+
+    public function getId(): int
+    {
+        return $this->id;
+    }
+
+    public function setId(int $id): void
+    {
+        $this->id = $id;
+    }
+
+    public function getIdQuizQuestion(): int
+    {
+        return $this->id_quiz_question;
+    }
+
+    public function setIdQuizQuestion(int $id_quiz_question): void
+    {
+        $this->id_quiz_question = $id_quiz_question;
     }
 
     public function getQuestion_line()

@@ -7,13 +7,30 @@ class Quiz
     private $id_category;
     private $count_of_questions;
     private $list_of_questions;
+    private int $id = 0;
 
-    public function __construct($id_user1, $id_user2, $id_category, $count_of_questions = 5)
+    public function __construct($id_user1, $id_user2 = 0, $id_category = 1, $count_of_questions = 5)
     {
         $this->id_user1 = $id_user1;
         $this->id_user2 = $id_user2;
         $this->id_category = $id_category;
         $this->count_of_questions = $count_of_questions;
+    }
+
+    public function getListOfQuestions()
+    {
+        return $this->list_of_questions;
+    }
+
+
+    public function getId(): int
+    {
+        return $this->id;
+    }
+
+    public function setId(int $id): void
+    {
+        $this->id = $id;
     }
 
     public function getIdUser1()
