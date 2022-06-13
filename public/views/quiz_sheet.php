@@ -19,18 +19,10 @@
         </h2>
     </div>
     <div class="buttons">
-        <a href="/play_with_friends">
-            <button id="b1" type="button">PLAY WITH FRIENDS</button>
-        </a>
-        <a href="/solo_game">
-            <button id="b2" type="button">SOLO GAME</button>
-        </a>
-        <a href="/your_points">
-            <button id="b3" type="button">YOUR POINTS</button>
-        </a>
-        <a href="/top_100">
-            <button id="b4" type="button">TOP 100</button>
-        </a>
+            <button id="b1" type="button">1</button>
+            <button id="b2" type="button">2</button>
+            <button id="b3" type="button">3</button>
+            <button id="b4" type="button">4</button>
     </div>
 </body>
 </html>
