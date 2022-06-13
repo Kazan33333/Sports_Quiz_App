@@ -34,7 +34,6 @@ class QuestionRepository extends Repository
 
     public function addQuestion(Question $question): void
     {
-        $date = new DateTime();
         $stmt = $this->database->connect()->prepare('
             INSERT INTO questions (question_line, answer1,answer2,answer3,answer4, correct_answer, id_category,id_user, flag, image)
             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)

@@ -12,7 +12,7 @@
     <div class="logo">
         <h1>
             <a href="/main_menu">
-                <img id="logo2" src="/public/img/Logo.png"></img>
+                <img id="logo2" src="/public/img/Logo.png" />
             </a>
         </h1>
     </div>
@@ -26,5 +26,14 @@
             <button class="button_play" type="submit" id="play">Play</button>
         </a>
     </div>
+
+    <?php
+    if(isset($quizes)){
+        foreach($quizes as $quiz) {
+            printf($quiz);
+        }
+    }
+    ?>
+
 </body>
 </html>

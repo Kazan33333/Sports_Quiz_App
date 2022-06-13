@@ -13,6 +13,7 @@ Router::get('play_with_friends', 'DefaultController');
 Router::get('top_100', 'DefaultController');
 Router::get('add_question', 'DefaultController');
 Router::get('your_points', 'DefaultController');
+Router::get('solo_game', 'QuizController');
 Router::get('quiz_sheet', 'DefaultController');
 
 Router::post('login', 'SecurityController');

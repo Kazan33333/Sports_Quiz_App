@@ -17,13 +17,29 @@ class QuizController extends AppController
         $this->questionRepository = new QuestionRepository();
     }
 
-    public function addQuizQuestions(Quiz &$quiz): void
+    private function addQuizQuestions(Quiz &$quiz): void
     {
         $max_id_questions = $this->quizRepository->get_max_id_question();
         $count_of_questions = $quiz->getCountOfQuestions();
         for($i = 0; $i < $count_of_questions; $i++)
         {
-            $quiz->add_question_to_quiz($this->questionRepository->getQuestion(rand(0, $max_id_questions)));
+            $question = $this->questionRepository->getQuestion(rand(0, $max_id_questions));
+            $quiz->add_question_to_quiz($question);
         }
+    }
+
+    public function solo_game()
+    {
+        $quiz = new Quiz(
+            $_COOKIE['id_user']
+        );
+
+        $this->quizRepository->addQuiz($quiz);
+
+        $this->addQuizQuestions($quiz);
+
+        $this->quizRepository->add_quiz_question($quiz);
+
+        return $this->render('solo_game', ['quizes' => [$quiz]]);
     }
 }
