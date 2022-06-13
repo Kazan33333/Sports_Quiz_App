@@ -23,7 +23,7 @@ class QuizController extends AppController
         $count_of_questions = $quiz->getCountOfQuestions();
         for($i = 0; $i < $count_of_questions; $i++)
         {
-            $id_question = rand(0, $max_id_questions);
+            $id_question = rand(1, $max_id_questions);
             $question = $this->questionRepository->getQuestion($id_question);
             $question->setId($id_question);
             $quiz->add_question_to_quiz($question);
