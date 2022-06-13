@@ -19,10 +19,12 @@
         </h2>
     </div>
     <div class="buttons">
+        <a href="/quiz_sheet">
             <button id="b1" type="button">1</button>
             <button id="b2" type="button">2</button>
             <button id="b3" type="button">3</button>
             <button id="b4" type="button">4</button>
+        </a>
     </div>
 </body>
 </html>
