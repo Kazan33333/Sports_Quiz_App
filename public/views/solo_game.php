@@ -12,7 +12,7 @@
     <div class="logo">
         <h1>
             <a href="/main_menu">
-                <img id="logo2" src="/public/img/Logo.png" />
+                <img id="logo2" src="/public/img/Logo.png"></img>
             </a>
         </h1>
     </div>
@@ -30,7 +30,7 @@
     <?php
     if(isset($quizes)){
         foreach($quizes as $quiz) {
-            printf($quiz);
+            echo $quiz;
         }
     }
     ?>

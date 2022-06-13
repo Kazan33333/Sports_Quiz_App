@@ -15,6 +15,7 @@ Router::get('add_question', 'DefaultController');
 Router::get('your_points', 'DefaultController');
 Router::get('solo_game', 'QuizController');
 Router::get('quiz_sheet', 'DefaultController');
+Router::get('solo_game', 'QuizController');
 
 Router::post('login', 'SecurityController');
 Router::post('logout', 'SecurityController');

@@ -15,6 +15,7 @@ class Quiz
         $this->id_user2 = $id_user2;
         $this->id_category = $id_category;
         $this->count_of_questions = $count_of_questions;
+        $this->list_of_questions = array();
     }
 
     public function getListOfQuestions()
