@@ -24,6 +24,11 @@ class DefaultController extends AppController
         $this->render('solo_game');
     }
 
+    public function quiz_sheet()
+    {
+        $this->render('quiz_sheet');
+    }
+
     public function play_with_friends()
     {
         $this->render('play_with_friends');

@@ -22,7 +22,9 @@
         </h2>
     </div>
     <div class="list1">
-        <button class="button_play" type="submit" id="play">Play</button>
+        <a href="/quiz_sheet">
+            <button class="button_play" type="submit" id="play">Play</button>
+        </a>
     </div>
 
     <?php
