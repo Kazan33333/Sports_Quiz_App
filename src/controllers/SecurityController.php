@@ -45,7 +45,7 @@ class SecurityController extends AppController {
 
         if (!isset($_COOKIE[$this->cookieName])) {
             setCookie($this->cookieName, $cookieNicknameValue, time() + (86400 * 30), "/");
-            setCookie('$id_user', $cookieIdValue, time() + (86400 * 30), "/");
+            setCookie('id_user', $cookieIdValue, time() + (86400 * 30), "/");
             setCookie('email', $cookieEmailValue, time() + (86400 * 30), "/");
         }
 

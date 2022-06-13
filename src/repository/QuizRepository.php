@@ -7,21 +7,21 @@ class QuizRepository extends Repository
 {
     public function addQuiz(Quiz &$quiz): void
     {
-        $date = new DateTime();
-        $stmt = $this->database->connect()->prepare('
-            INSERT INTO quiz (id_user1, id_user2, date, id_category, count_of_questions)
-            VALUES (?, ?, ?, ?, ?) RETURNING id;
-        ');
+//        $date = new DateTime();
+        $stmt = $this->database->connect()->prepare("
+            INSERT INTO quizes (id_user1, id_user2, id_category, count_of_questions)
+            VALUES (?, 1, ?, ?) RETURNING id;
+        ");
 
         $stmt->execute([
-            $quiz->getIdUser1(),
             $quiz->getIdUser2(),
-            $date,
             $quiz->getIdCategory(),
             $quiz->getCountOfQuestions()
         ]);
 
-        $quiz->setId($stmt->fetch(PDO::FETCH_ASSOC));
+        $id = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        $quiz->setId($id['id']);
     }
 
     public function get_max_id_question(): ?int
