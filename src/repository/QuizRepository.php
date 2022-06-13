@@ -7,13 +7,13 @@ class QuizRepository extends Repository
 {
     public function addQuiz(Quiz &$quiz): void
     {
-//        $date = new DateTime();
         $stmt = $this->database->connect()->prepare("
             INSERT INTO quizes (id_user1, id_user2, id_category, count_of_questions)
-            VALUES (?, 1, ?, ?) RETURNING id;
+            VALUES (?, ?, ?, ?) RETURNING id;
         ");
 
         $stmt->execute([
+            $quiz->getIdUser1(),
             $quiz->getIdUser2(),
             $quiz->getIdCategory(),
             $quiz->getCountOfQuestions()
@@ -47,17 +47,17 @@ class QuizRepository extends Repository
         {
             $stmt = $this->database->connect()->prepare('
                 INSERT INTO quiz_question (id_quiz, id_question)
-                VALUES (?, ?) RETURNING id;
+                VALUES (?, ?) RETURNING id
             ');
-
-            $ret_val = $stmt->fetch(PDO::FETCH_ASSOC);
-
-            $question->setIdQuizQuestion($ret_val['id']);
 
             $stmt->execute([
                 $quiz->getId(),
                 $question->getId()
             ]);
+
+            $ret_val = $stmt->fetch(PDO::FETCH_ASSOC);
+
+            $question->setIdQuizQuestion($ret_val['id']);
         }
     }
 }

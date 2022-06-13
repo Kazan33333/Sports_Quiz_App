@@ -40,6 +40,6 @@ class QuizController extends AppController
 
         $this->quizRepository->add_quiz_question($quiz);
 
-        return $this->render('solo_game', ['quizes' => [$quiz]]);
+        return $this->render('solo_game', ['quizes' => [$_COOKIE['id_user']]]);
     }
 }

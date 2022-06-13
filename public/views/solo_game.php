@@ -30,7 +30,7 @@
     <?php
     if(isset($quizes)){
         foreach($quizes as $quiz) {
-            printf($quiz);
+            echo $quiz;
         }
     }
     ?>
