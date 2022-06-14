@@ -26,14 +26,5 @@
             <button class="button_play" type="submit" id="play">Play</button>
         </a>
     </div>
-
-    <?php
-    if(isset($quizes)){
-        foreach($quizes as $quiz) {
-            echo $quiz;
-        }
-    }
-    ?>
-
 </body>
 </html>

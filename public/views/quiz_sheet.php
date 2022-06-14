@@ -15,15 +15,15 @@
     </div>
     <div class="header">
         <h2>
-            <i id="i1">QUESTION</i>
+            <i id="i1"><?php echo $question_line;?></i>
         </h2>
     </div>
     <div class="buttons">
         <a href="/quiz_sheet">
-            <button id="b1" type="button">1</button>
-            <button id="b2" type="button">2</button>
-            <button id="b3" type="button">3</button>
-            <button id="b4" type="button">4</button>
+            <button id="b1" type="button"><?php echo $answer1;?></button>
+            <button id="b2" type="button"><?php echo $answer2;?></button>
+            <button id="b3" type="button"><?php echo $answer3;?></button>
+            <button id="b4" type="button"><?php echo $answer4;?></button>
         </a>
     </div>
 </body>

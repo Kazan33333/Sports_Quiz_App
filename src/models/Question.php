@@ -11,6 +11,7 @@ class Question {
     private $id_category;
     private $image;
     private int $id_quiz_question = 0;
+    private $answer;
 
     public function __construct($question_line, $answer1,$answer2,$answer3,$answer4, $correct_answer, $id_category, $image)
     {
@@ -24,7 +25,17 @@ class Question {
         $this->image = $image;
     }
 
-    public function getId(): int
+    public function getAnswer()
+    {
+        return $this->answer;
+    }
+
+    public function setAnswer($answer): void
+    {
+        $this->answer = $answer;
+    }
+
+    public function getId()
     {
         return $this->id;
     }
