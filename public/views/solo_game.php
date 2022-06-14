@@ -22,7 +22,10 @@
         </h2>
     </div>
     <div class="list1">
-        <a href="/quiz_sheet">
+        <h3>
+            Count of questions: <?php echo $count_of_questions;?>
+        </h3>
+        <a href="/quiz_sheet/1">
             <button class="button_play" type="submit" id="play">Play</button>
         </a>
     </div>

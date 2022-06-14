@@ -42,13 +42,18 @@ class QuizController extends AppController
 
         $this->quizRepository->add_quiz_question($quiz);
 
-        return $this->render('solo_game', ['quizes' => $quiz]);
+        return $this->render('solo_game', ['count_of_questions' => $quiz->getCountOfQuestions()]);
     }
 
     public function quiz_sheet($id)
     {
         if($id == null){
             $id = 0;
+        }
+
+        if($id >= 5){
+            $url = "http://$_SERVER[HTTP_HOST]";
+            header("Location: {$url}/main_menu");
         }
 
         $max_id_questions = $this->quizRepository->get_max_id_question();

@@ -19,7 +19,7 @@
         </h2>
     </div>
     <div class="buttons">
-        <a href="/quiz_sheet">
+        <a href="/quiz_sheet/<?php echo $id+1;?>">
             <button id="b1" type="button"><?php echo $answer1;?></button>
             <button id="b2" type="button"><?php echo $answer2;?></button>
             <button id="b3" type="button"><?php echo $answer3;?></button>
