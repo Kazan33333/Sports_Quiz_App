@@ -123,4 +123,22 @@ class QuizRepository extends Repository
 
         return $ret_val['count'];
     }
+
+    public function getRanking(): array
+    {
+        $stmt = $this->database->connect()->prepare("
+            SELECT users.nickname, COUNT(answers.id) as points FROM answers
+            INNER JOIN quiz_question ON answers.id_quiz_question = quiz_question.id
+            INNER JOIN questions ON quiz_question.id_question = questions.id
+            INNER JOIN quizes ON quiz_question.id_quiz = quizes.id
+            INNER JOIN users ON answers.id_user = users.id
+            WHERE questions.correct_answer = answers.answer
+            GROUP BY users.nickname
+            ORDER BY points
+            LIMIT 100;
+        ");
+
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
 }

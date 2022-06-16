@@ -22,7 +22,18 @@
         </h2>
     </div>
     <div class="list1">
-        
+        <table>
+            <tr>
+                <th>User</th>
+                <th>Points</th>
+            </tr>
+            <?php foreach ($points as $point):?>
+                <tr>
+                    <td><?php echo $point['nickname']?></td>
+                    <td><?php echo $point['points']?></td>
+                </tr>
+            <?php endforeach;?>
+        </table>
     </div>
 </body>
 </html>

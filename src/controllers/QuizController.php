@@ -98,4 +98,11 @@ class QuizController extends AppController
             'total' => $total
         ]);
     }
+
+    public function top_100() {
+        $points = $this->quizRepository->getRanking();
+        $this->render('top_100', [
+            'points' => $points
+        ]);
+    }
 }
