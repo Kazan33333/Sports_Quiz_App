@@ -31,7 +31,12 @@
         <?php echo $id;?> / 5
     </div>
     <div class="points">
-        <?php echo $_COOKIE['points'];?> / 5
+        <?php if(!isset($points) || $points == null || $points == 0) {
+            echo "0";
+        }else {
+            echo $points;
+        }
+        ?> / 5
     </div>
 </body>
 </html>

@@ -51,10 +51,12 @@ class QuizController extends AppController
     public function quiz_sheet($id)
     {
         if($_POST['answer']) {
+            $my_points = $_COOKIE['points'];
             $answer = $_POST['answer'];
             $correct_answer = $_POST['correct_answer'];
             if($answer == $correct_answer) {
-                setcookie('points', $_COOKIE['points'] + 1, time() + (86400 * 30), "/");
+                $my_points += 1;
+                setcookie('points',  $my_points, time() + (86400 * 30), "/");
             }
             $id_qq_1 = $id-1;
             $this->quizRepository->add_answer($_COOKIE['id_qq'.$id_qq_1], $answer);
@@ -83,7 +85,8 @@ class QuizController extends AppController
             'answer3' => $question->getAnswer3(),
             'answer4' => $question->getAnswer4(),
             'correct_answer' => $question->getCorrect_answer(),
-            'image' => $question->getImage()
+            'image' => $question->getImage(),
+            'points' => $my_points
         ]);
     }
 }
