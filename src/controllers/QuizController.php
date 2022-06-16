@@ -21,12 +21,13 @@ class QuizController extends AppController
     {
         $max_id_questions = $this->quizRepository->get_max_id_question();
         $count_of_questions = $quiz->getCountOfQuestions();
-        for($i = 0; $i < $count_of_questions; $i++)
+        for($i = 1; $i <= $count_of_questions; $i++)
         {
             $id_question = rand(1, $max_id_questions);
             $question = $this->questionRepository->getQuestion($id_question);
             $question->setId($id_question);
             $quiz->add_question_to_quiz($question);
+            setcookie('id_question'.$i, $id_question, time() + (86400 * 30), "/");
         }
     }
 
@@ -47,23 +48,30 @@ class QuizController extends AppController
 
     public function quiz_sheet($id)
     {
-        if($id == null){
-            $id = 0;
+        if($id == null || $id == 0){
+            $id = 1;
         }
 
-        if($id >= 5){
+        if($id > 5){
             $url = "http://$_SERVER[HTTP_HOST]";
             header("Location: {$url}/main_menu");
         }
 
-        $question = $this->questionRepository->getQuestion(1);
+        $question = $this->questionRepository->getQuestion($_COOKIE['id_question'.$id]);
 
         if($question == null){
             $this->render('main_menu', []);
         }
 
         $this->render('quiz_sheet', [
-            'id' => $id
+            'id' => $id,
+            'question_line' => $question->getQuestion_line(),
+            'answer1' => $question->getAnswer1(),
+            'answer2' => $question->getAnswer2(),
+            'answer3' => $question->getAnswer3(),
+            'answer4' => $question->getAnswer4(),
+            'correct_answer' => $question->getCorrect_answer(),
+            'image' => $question->getImage()
         ]);
     }
 }

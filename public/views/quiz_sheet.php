@@ -15,22 +15,19 @@
     </div>
     <div class="header">
         <h2>
-            <i id="i1"><?php echo $question_line;?></i>
+            <i id="i1"><?php echo $correct_answer, $question_line;?></i>
         </h2>
     </div>
     <div class="buttons">
-        <form action="/quiz_sheet/<?php echo $id+1;?>">
-            <input type="submit" name="answer" value="">
+        <form action="/quiz_sheet/<?php echo $id+1;?>" method="GET">
+            <input type="submit" name="answer" value="<?php echo $answer1;?>" id="A">
+            <input type="submit" name="answer" value="<?php echo $answer2;?>" id="B">
+            <input type="submit" name="answer" value="<?php echo $answer3;?>" id="C">
+            <input type="submit" name="answer" value="<?php echo $answer4;?>" id="D">
         </form>
-        <?php
-            print_r($quiz);
-        ?>
-        <a href="/quiz_sheet/<?php echo $id+1;?>">
-            <button id="b1" type="button"><?php echo $answer1;?></button>
-            <button id="b2" type="button"><?php echo $answer2;?></button>
-            <button id="b3" type="button"><?php echo $answer3;?></button>
-            <button id="b4" type="button"><?php echo $answer4;?></button>
-        </a>
+    </div>
+    <div class="button_1">
+        <?php echo $id;?> / 5
     </div>
 </body>
 </html>

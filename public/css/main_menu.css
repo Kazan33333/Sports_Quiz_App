@@ -1,4 +1,17 @@
-.buttons #b1,#b2,#b3,#b4{
+.buttons #A,#B, #C,#D{
+    background: #f8d582;
+    border: 6px solid #0e6cdb;
+    border-radius: 1em;
+    margin: 3vh;
+    color: #18893c;
+    font-size: 6vh;
+    font-weight: bold;
+    width: 37vw;
+    height: 34vh;
+    cursor: pointer;
+}
+
+.buttons #b1,#b2, #b3,#b4{
     background: #f8d582;
     border: 6px solid #0e6cdb;
     border-radius: 1em;
@@ -35,6 +48,30 @@
     left: 50vw;
 }
 
+#A{
+    position: absolute;
+    top: 20vh;
+    left: 10vw;
+}
+
+#B{
+    position: absolute;
+    top: 20vh;
+    left: 50vw;
+}
+
+#C{
+    position: absolute;
+    top: 60vh;
+    left: 10vw;
+}
+
+#D{
+    position: absolute;
+    top: 60vh;
+    left: 50vw;
+}
+
 #b1:hover,#b2:hover,#b3:hover,#b4:hover {
     background: #FEC337;
 }
@@ -62,4 +99,5 @@
     border-radius: 0.5em;
     top: 17vh;
     left: 1vw;
+    padding: 0;
 }

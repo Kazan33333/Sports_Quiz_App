@@ -22,6 +22,7 @@ class QuizRepository extends Repository
         $id = $stmt->fetch(PDO::FETCH_ASSOC);
 
         $quiz->setId($id['id']);
+        setcookie('id_quiz', $id['id'], time() + (86400 * 30), "/");
     }
 
     public function get_max_id_question(): ?int
@@ -43,6 +44,7 @@ class QuizRepository extends Repository
 
     public function add_quiz_question(Quiz $quiz): void
     {
+        $i = 1;
         foreach ($quiz->getListOfQuestions() as $question)
         {
             $stmt = $this->database->connect()->prepare('
@@ -57,7 +59,8 @@ class QuizRepository extends Repository
 
             $ret_val = $stmt->fetch(PDO::FETCH_ASSOC);
 
-            $question->setIdQuizQuestion($ret_val['id']);
+            setcookie('id_qq'.$i, $ret_val['id'], time() + (86400 * 30), "/");
+            $i++;
         }
     }
 }
