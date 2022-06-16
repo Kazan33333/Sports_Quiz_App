@@ -50,9 +50,9 @@ class QuizController extends AppController
 
     public function quiz_sheet($id)
     {
-        if($_GET['answer']) {
-            $answer = $_GET['answer'];
-            $correct_answer = $_GET['correct_answer'];
+        if($_POST['answer']) {
+            $answer = $_POST['answer'];
+            $correct_answer = $_POST['correct_answer'];
             if($answer == $correct_answer) {
                 setcookie('points', $_COOKIE['points'] + 1, time() + (86400 * 30), "/");
             }

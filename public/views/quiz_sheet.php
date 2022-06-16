@@ -15,11 +15,11 @@
     </div>
     <div class="header">
         <h2>
-            <i id="i1"><?php echo $correct_answer, $question_line;?></i>
+            <i id="i1"><?php echo $question_line;?></i>
         </h2>
     </div>
     <div class="buttons">
-        <form action="/quiz_sheet/<?php echo $id+1;?>" method="GET">
+        <form action="/quiz_sheet/<?php echo $id+1;?>" method="POST">
             <input type="hidden" name="correct_answer" value=<?php echo $correct_answer?>>
             <button type="submit" name="answer" value="A" id="A"><?php echo $answer1;?></button>
             <button type="submit" name="answer" value="B" id="B"><?php echo $answer2;?></button>
@@ -29,6 +29,9 @@
     </div>
     <div class="question_no">
         <?php echo $id;?> / 5
+    </div>
+    <div class="points">
+        <?php echo $_COOKIE['points'];?> / 5
     </div>
 </body>
 </html>
