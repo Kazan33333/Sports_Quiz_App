@@ -27,7 +27,7 @@
             <input type="submit" name="answer" value="<?php echo $answer4;?>" id="D">
         </form>
     </div>
-    <div class="button_1">
+    <div class="question_no">
         <?php echo $id;?> / 5
     </div>
 </body>

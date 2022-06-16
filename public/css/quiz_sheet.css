@@ -1,0 +1,17 @@
+#i1 {
+    font-size: 27px !important;
+    padding-left: 1.5vw;
+    padding-right: 1.5vw;
+}
+
+.buttons {
+    word-wrap: normal;
+}
+
+.question_no {
+    position: absolute;
+    top: 17vh;
+    left: 1vw;
+    font-size: 45px;
+    font-weight: 500;
+}
