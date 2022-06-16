@@ -33,6 +33,7 @@
 .button_play {
     position: absolute;
     top: 43vh;
+    left: 19vw;
     border: 6px solid #0e6cdb;
     border-radius: 0.7em;
     margin: 3vh;

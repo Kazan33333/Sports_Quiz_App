@@ -5,7 +5,7 @@
 }
 
 .buttons {
-    word-wrap: normal;
+    overflow: auto;
 }
 
 .question_no {
@@ -22,4 +22,16 @@
     left: 3vw;
     font-size: 25px;
     font-weight: 500;
+}
+
+.form {
+    position: absolute;
+    top: 40px;
+    left: 10px;
+    border-radius: 0;
+    gap: 1em;
+    width: 50vw;
+    height: 52vh;
+    background: none;
+    border: 6px solid #0e6cdb;
 }
