@@ -24,14 +24,14 @@
     font-weight: 500;
 }
 
-.form {
+form {
     position: absolute;
-    top: 40px;
+    top: 5px !important;
     left: 10px;
     border-radius: 0;
     gap: 1em;
-    width: 50vw;
-    height: 52vh;
+    width: 0 !important;
+    height: 0 !important;
     background: none;
-    border: 6px solid #0e6cdb;
+    border: 0 !important;
 }
