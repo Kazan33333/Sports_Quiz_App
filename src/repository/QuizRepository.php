@@ -63,4 +63,18 @@ class QuizRepository extends Repository
             $i++;
         }
     }
+
+    public function add_answer($id_qq, $answer): void
+    {
+        $stmt = $this->database->connect()->prepare('
+            INSERT INTO answers (id_quiz_question, id_user, answer)
+            VALUES (?, ?, ?)
+        ');
+
+        $stmt->execute([
+            $id_qq,
+            $_COOKIE['id_user'],
+            $answer
+        ]);
+    }
 }

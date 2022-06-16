@@ -20,6 +20,7 @@
     </div>
     <div class="buttons">
         <form action="/quiz_sheet/<?php echo $id+1;?>" method="GET">
+            <input type="hidden" name="correct_answer" value=<?php echo $correct_answer?>>
             <input type="submit" name="answer" value="<?php echo $answer1;?>" id="A">
             <input type="submit" name="answer" value="<?php echo $answer2;?>" id="B">
             <input type="submit" name="answer" value="<?php echo $answer3;?>" id="C">

@@ -43,11 +43,23 @@ class QuizController extends AppController
 
         $this->quizRepository->add_quiz_question($quiz);
 
+        setcookie('points', 0, time() + (86400 * 30), "/");
+
         return $this->render('solo_game', ['count_of_questions' => $quiz->getCountOfQuestions()]);
     }
 
     public function quiz_sheet($id)
     {
+        if($_GET['answer']) {
+            $answer = $_GET['answer'];
+            $correct_answer = $_GET['correct_answer'];
+            if($answer == $correct_answer) {
+                setcookie('points', $_COOKIE['points'] + 1, time() + (86400 * 30), "/");
+            }
+            $id_qq_1 = $id-1;
+            $this->quizRepository->add_answer($_COOKIE['id_qq'.$id_qq_1], $answer);
+        }
+
         if($id == null || $id == 0){
             $id = 1;
         }
