@@ -66,7 +66,7 @@ class QuizController extends AppController
 
         if($id > 5){
             $url = "http://$_SERVER[HTTP_HOST]";
-            header("Location: {$url}/main_menu");
+            header("Location: {$url}/scores");
         }
 
         $question = $this->questionRepository->getQuestion($_COOKIE['id_question'.$id]);

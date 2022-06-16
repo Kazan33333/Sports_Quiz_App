@@ -21,10 +21,10 @@
     <div class="buttons">
         <form action="/quiz_sheet/<?php echo $id+1;?>" method="GET">
             <input type="hidden" name="correct_answer" value=<?php echo $correct_answer?>>
-            <input type="submit" name="answer" value="<?php echo $answer1;?>" id="A">
-            <input type="submit" name="answer" value="<?php echo $answer2;?>" id="B">
-            <input type="submit" name="answer" value="<?php echo $answer3;?>" id="C">
-            <input type="submit" name="answer" value="<?php echo $answer4;?>" id="D">
+            <button type="submit" name="answer" value="A" id="A"><?php echo $answer1;?></button>
+            <button type="submit" name="answer" value="B" id="B"><?php echo $answer2;?></button>
+            <button type="submit" name="answer" value="C" id="C"><?php echo $answer3;?></button>
+            <button type="submit" name="answer" value="D" id="D"><?php echo $answer4;?></button>
         </form>
     </div>
     <div class="button_1">

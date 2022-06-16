@@ -22,12 +22,13 @@
         </h2>
     </div>
     <div class="list1">
-        <button class="button_play" type="submit" id="play">Play again</button>
+        <a href="/solo_game">
+            <button class="button_play" type="submit" id="play">Play again</button>
+        </a>
     </div>
     <div class="scores">
-        <i id="i2">YOU WON!</i>
-        <i id="i3">Your score:....................9/10</i>
-        <i id="i4">Friend score:..................7/10</i>
+        <i id="i2">GREAT!</i>
+        <i id="i3">Your score:....................<?php echo $_COOKIE['points'];?>/5</i>
     </div>
 </body>
 </html>
