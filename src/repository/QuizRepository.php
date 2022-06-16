@@ -134,7 +134,7 @@ class QuizRepository extends Repository
             INNER JOIN users ON answers.id_user = users.id
             WHERE questions.correct_answer = answers.answer
             GROUP BY users.nickname
-            ORDER BY points
+            ORDER BY points DESC
             LIMIT 100;
         ");
 
