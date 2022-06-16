@@ -14,7 +14,20 @@
             <a href="/main_menu">
                 <img id="logo2" src="/public/img/Logo.png"></img>
             </a>
+            <?php echo $total;?>
         </h1>
     </div>
+    <table>
+        <tr>
+            <th>Date</th>
+            <th>Points</th>
+        </tr>
+        <?php foreach ($points as $point):?>
+        <tr>
+            <td><?php echo $point['quiz_date']?></td>
+            <td><?php echo $point['count']?></td>
+        </tr>
+        <?php endforeach;?>
+    </table>
 </body>
 </html>

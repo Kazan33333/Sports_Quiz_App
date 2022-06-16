@@ -77,4 +77,50 @@ class QuizRepository extends Repository
             $answer
         ]);
     }
+
+    public function getPoints(): array
+    {
+        $stmt = $this->database->connect()->prepare("
+            SELECT to_char(quizes.date, 'YYYY-MM-DD HH24:MI') as quiz_date, COUNT(answers.id) FROM answers
+            INNER JOIN quiz_question ON answers.id_quiz_question = quiz_question.id
+            INNER JOIN questions ON quiz_question.id_question = questions.id
+            INNER JOIN quizes ON quiz_question.id_quiz = quizes.id
+            WHERE questions.correct_answer = answers.answer
+            AND answers.id_user = :id_user
+            GROUP BY answers.id_user, quizes.id;
+        ");
+
+        $id_user = $_COOKIE['id_user'];
+
+        $stmt->bindParam(':id_user', $id_user, PDO::PARAM_STR);
+
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public function get_total_points(): ?int
+    {
+        $stmt = $this->database->connect()->prepare('
+            SELECT answers.id_user, COUNT(answers.id) FROM answers
+            INNER JOIN quiz_question ON answers.id_quiz_question = quiz_question.id
+            INNER JOIN questions ON quiz_question.id_question = questions.id
+            WHERE questions.correct_answer = answers.answer
+            AND answers.id_user = :id_user
+            GROUP BY answers.id_user;
+        ');
+
+        $id_user = $_COOKIE['id_user'];
+
+        $stmt->bindParam(':id_user', $id_user, PDO::PARAM_STR);
+
+        $stmt->execute();
+
+        $ret_val = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        if ($ret_val == false) {
+            return null;
+        }
+
+        return $ret_val['count'];
+    }
 }

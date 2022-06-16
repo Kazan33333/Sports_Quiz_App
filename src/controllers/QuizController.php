@@ -89,4 +89,13 @@ class QuizController extends AppController
             'points' => $my_points
         ]);
     }
+
+    public function your_points() {
+        $points = $this->quizRepository->getPoints();
+        $total = $this->quizRepository->get_total_points();
+        $this->render('your_points', [
+            'points' => $points,
+            'total' => $total
+        ]);
+    }
 }

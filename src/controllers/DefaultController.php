@@ -34,11 +34,6 @@ class DefaultController extends AppController
         $this->render('add_question');
     }
 
-    public function your_points()
-    {
-        $this->render('your_points');
-    }
-
     public function scores()
     {
         $this->render('scores');
