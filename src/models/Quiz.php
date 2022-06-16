@@ -2,11 +2,11 @@
 
 class Quiz
 {
-    private $id_user1;
-    private $id_user2;
-    private $id_category;
-    private $count_of_questions;
-    private $list_of_questions;
+    private int $id_user1;
+    private int $id_user2;
+    private int $id_category;
+    private int $count_of_questions;
+    private array $list_of_questions;
     private int $id = 0;
 
     public function __construct($id_user1, $id_user2 = 0, $id_category = 1, $count_of_questions = 5)

@@ -56,23 +56,14 @@ class QuizController extends AppController
             header("Location: {$url}/main_menu");
         }
 
-        $max_id_questions = $this->quizRepository->get_max_id_question();
-        $id_question = rand(1, $max_id_questions);
-        $question = $this->questionRepository->getQuestion($id_question);
+        $question = $this->questionRepository->getQuestion(1);
 
         if($question == null){
             $this->render('main_menu', []);
         }
 
         $this->render('quiz_sheet', [
-            'id' => $id,
-            'question_line' => $question->getQuestion_line(),
-            'answer1' => $question->getAnswer1(),
-            'answer2' => $question->getAnswer2(),
-            'answer3' => $question->getAnswer3(),
-            'answer4' => $question->getAnswer4(),
-            'correct_answer' => $question->getCorrect_answer(),
-            'image' => $question->getImage()
+            'id' => $id
         ]);
     }
 }

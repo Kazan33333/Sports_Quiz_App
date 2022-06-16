@@ -19,6 +19,12 @@
         </h2>
     </div>
     <div class="buttons">
+        <form action="/quiz_sheet/<?php echo $id+1;?>">
+            <input type="submit" name="answer" value="">
+        </form>
+        <?php
+            print_r($quiz);
+        ?>
         <a href="/quiz_sheet/<?php echo $id+1;?>">
             <button id="b1" type="button"><?php echo $answer1;?></button>
             <button id="b2" type="button"><?php echo $answer2;?></button>
