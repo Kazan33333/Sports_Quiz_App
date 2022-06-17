@@ -3,3 +3,8 @@
     height: 12vh;
     border: 6px solid #0e6cdb;
 }
+
+.list1 {
+    position: relative;
+    top: 8vh;
+}

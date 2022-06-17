@@ -14,7 +14,7 @@
     </div>
     <div class="header">
         <h2>
-            <i id="i1">Shall we play?</i>
+            <i id="i1">Shall we play, <?php echo $_COOKIE['user'];?>?</i>
         </h2>
     </div>
     <div class="buttons">

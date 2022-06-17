@@ -98,9 +98,10 @@
 }
 
 .button_1{
-    width: 10vw !important;
+    width: 9vw !important;
     position: absolute;
-    border-radius: 0.5em;
+    font-size: 20px; !important;
+    border-radius: 15px;
     top: 17vh;
     left: 1vw;
     padding: 0;
