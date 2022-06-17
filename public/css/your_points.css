@@ -4,12 +4,14 @@
 }
 
 th, td {
-    text-align: left;
+    text-align: center;
 }
 
 table {
+    position: relative;
+    left: -5vw;
     font-size: 30px;
-    width: 50%;
+    width: 45vw;
 }
 
 .suma_pkt {

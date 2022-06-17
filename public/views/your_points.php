@@ -22,7 +22,9 @@
         </h2>
     </div>
     <div class="list1">
-        <div class="suma_pkt">Suma punktów: <?php echo $total;?></div>
+        <div class="suma_pkt">
+            Total number of points: <?php echo $total;?>
+        </div>
         <table>
             <tr>
                 <th>Date</th>

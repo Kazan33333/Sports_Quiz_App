@@ -10,10 +10,13 @@
 }
 
 th, td {
-    text-align: left;
+    text-align: center;
+    border-bottom: 3px #137131 solid;
 }
 
 table {
-    font-size: 30px;
-    width: 92%;
+    position: relative;
+    border-collapse: collapse;
+    font-size: 35px;
+    width: 75vw;
 }
