@@ -76,11 +76,15 @@
     background: #FEC337;
 }
 
+#A:hover,#B:hover,#C:hover,#D:hover {
+    background: #FEC337;
+}
+
 .form {
     position: absolute;
     top: 40px;
     left: 10px;
-    border-radius: 0px;
+    border-radius: 0;
     gap: 1em;
     width: 50vw;
     height: 52vh;

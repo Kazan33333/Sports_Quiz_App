@@ -24,11 +24,13 @@
     <div class="list1">
         <table>
             <tr>
+                <th>#</th>
                 <th>User</th>
                 <th>Points</th>
             </tr>
             <?php foreach ($points as $point):?>
                 <tr>
+                    <td></td>
                     <td><?php echo $point['nickname']?></td>
                     <td><?php echo $point['points']?></td>
                 </tr>

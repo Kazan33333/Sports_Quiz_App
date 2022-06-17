@@ -28,7 +28,7 @@
     </div>
     <div class="scores">
         <i id="i2">GREAT!</i>
-        <i id="i3">Your score:....................<?php echo $_COOKIE['points'];?>/5</i>
+        <i id="i3">Your score: .................. <?php echo $_COOKIE['points'];?>/5</i>
     </div>
 </body>
 </html>
