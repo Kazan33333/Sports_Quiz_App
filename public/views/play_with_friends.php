@@ -23,7 +23,9 @@
         </h2>
     </div>
     <div class="list1">
-        <a>This feature will be added in one of the upcoming updates. Stay tuned!</a>
+        <div class="info">
+            This feature will be added in one of the upcoming updates. Stay tuned!
+        </div>
         <a href="/solo_game">
             <button class="button_play" type="submit" id="play">Solo game</button>
         </a>

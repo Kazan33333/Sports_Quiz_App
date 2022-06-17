@@ -32,9 +32,9 @@
     </div>
     <div class="points">
         <?php if(!isset($points) || $points == null || $points == 0) {
-            echo "0";
+            echo "✔: 0";
         }else {
-            echo $points;
+            echo '✔: ', $points;
         }
         ?> / 5
     </div>

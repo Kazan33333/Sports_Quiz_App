@@ -9,6 +9,7 @@
 }
 
 .question_no {
+    color: #F8D582;
     position: absolute;
     top: 17vh;
     left: 1vw;
@@ -17,9 +18,10 @@
 }
 
 .points {
+    color: #00FF00;
     position: absolute;
-    top: 30vh;
-    left: 2vw;
+    top: 26vh;
+    left: 1vw;
     font-size: 25px;
     font-weight: 500;
 }
