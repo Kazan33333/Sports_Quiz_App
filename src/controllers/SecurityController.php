@@ -75,7 +75,7 @@ class SecurityController extends AppController {
     public function logout()
     {
         if (isset($_COOKIE['user'])) {
-            setcookie('id_user', '', time() - (86400 * 30), "/");
+            setcookie($this->cookieName, '', time() - (86400 * 30), "/");
             setcookie('user', '', time() - (86400 * 30), "/");
             setcookie('email', '', time() - (86400 * 30), "/");
             $url = "http://$_SERVER[HTTP_HOST]";
