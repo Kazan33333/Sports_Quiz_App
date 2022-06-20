@@ -26,6 +26,15 @@
     font-weight: 500;
 }
 
+.points-wrong {
+    color: #FF0000;
+    position: absolute;
+    top: 32vh;
+    left: 1vw;
+    font-size: 25px;
+    font-weight: 500;
+}
+
 form {
     position: absolute;
     top: 5px !important;

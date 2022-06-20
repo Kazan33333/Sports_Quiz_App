@@ -38,5 +38,13 @@
         }
         ?> / 5
     </div>
+    <div class="points-wrong">
+        <?php if(!isset($points) || $points == null) {
+            echo "✘: 0";
+        }else {
+            echo '✘: ', $id - 1 - $points;
+        }
+        ?> / 5
+    </div>
 </body>
 </html>
